@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#101a33" />
+<title>SP2D Insight — Realisasi Anggaran 2026</title>
+<style>
+@import url('');
+:root{color-scheme:light;--bg:#f5f7fb;--panel:#fff;--panel2:#f8f9fc;--ink:#202940;--muted:#8390a6;--line:#e7eaf2;--brand:#525ccf;--brandlight:#edf0ff;--green:#16a184;--amber:#e9a23b;--red:#e9776b;--nav:#121d35;--shadow:0 12px 36px rgba(22,36,66,.045);--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;line-height:1.5}button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #9ca3fa;outline-offset:2px}a{text-decoration:none;color:inherit}svg{flex-shrink:0}.layout{display:flex;min-height:100vh}.sidebar{width:238px;background:var(--nav);color:#cad2e6;padding:29px 17px;position:sticky;top:0;height:100vh;flex-shrink:0;display:flex;flex-direction:column}.logo{display:flex;gap:12px;align-items:center;padding:2px 10px 36px;color:#fff}.logo-icon{width:40px;height:40px;background:linear-gradient(140deg,#8992ff,#5257cc);display:grid;place-items:center;border-radius:12px;box-shadow:0 7px 18px #6168e440;font-weight:900;font-size:19px}.brand-title{font-size:17px;font-weight:800;letter-spacing:-.5px}.brand-sub{font-size:10px;color:#9ba8c6;letter-spacing:1.7px}.nav-label{margin:7px 12px 12px;font-weight:700;font-size:10px;letter-spacing:1.8px;color:#7785a5}.nav-link{width:100%;display:flex;align-items:center;gap:11px;color:#adbad2;border-radius:11px;padding:12px 13px;font-weight:600;transition:.2s;text-align:left;border:0;background:transparent}.nav-link svg{width:17px;height:17px}.nav-link:hover,.nav-link.active{background:#243250;color:white}.nav-link.active{box-shadow:inset 3px 0 #98a0ff}.side-spacer{flex:1}.source-mini{margin:20px 8px 5px;border:1px solid #34435e;background:#1b2943;border-radius:14px;padding:14px 13px}.source-mini strong{display:block;color:#e6eafe;font-size:12px}.source-mini span{font-size:11px;color:#a3b0cb}.source-mini .dot{display:inline-block;background:#51d5b0;width:7px;height:7px;border-radius:50%;margin-right:6px}.side-foot{padding:13px 11px;font-size:11px;color:#7787a5}.main{width:calc(100% - 238px);min-width:0;padding:28px 37px 50px;max-width:1900px;margin:0 auto}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:23px}.crumb{font-size:12px;color:var(--muted);font-weight:550}.crumb b{color:var(--ink);font-weight:700}.crumb span{padding:0 9px;color:#b2bdd0}.top-actions{display:flex;align-items:center;gap:8px}.icon-btn{border:1px solid var(--line);width:37px;height:37px;display:grid;place-items:center;border-radius:11px;background:var(--panel);color:var(--ink)}.icon-btn svg{width:18px;height:18px}.date-pill{display:flex;align-items:center;gap:8px;padding:8px 11px;background:var(--panel);border:1px solid var(--line);border-radius:10px;color:var(--muted);font-size:12px;font-weight:650}.headline{display:flex;justify-content:space-between;align-items:flex-end;gap:15px;margin-bottom:20px}.eyebrow{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);font-weight:800}.headline h1{font-size:clamp(25px,2.3vw,35px);letter-spacing:-1.1px;line-height:1.15;margin:6px 0 8px}.subtitle{color:var(--muted);font-size:13px}.subtitle strong{font-weight:650;color:var(--ink)}.filter-bar{display:grid;grid-template-columns:minmax(155px,1fr) minmax(195px,1.3fr) auto;gap:12px;background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);padding:16px;margin:18px 0 20px}.field>label{font-weight:700;font-size:11px;color:var(--muted);display:block;margin-bottom:7px}.select-wrap{position:relative}.select-wrap select{width:100%;appearance:none;padding:11px 36px 11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--ink);font-size:12px;font-weight:600;overflow:hidden;text-overflow:ellipsis}.select-wrap:after{content:'⌄';position:absolute;right:14px;top:8px;color:var(--muted);font-size:21px;pointer-events:none}.reset-btn,.export-btn,.ghost-btn{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:10px 15px;font-size:12px;font-weight:700;color:var(--ink);display:inline-flex;justify-content:center;align-items:center;gap:8px}.reset-btn{align-self:end;height:41px}.reset-btn:hover,.ghost-btn:hover{background:var(--panel2)}.export-btn{background:var(--brand);color:white;border-color:var(--brand)}.export-btn:hover{filter:brightness(1.08)}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}.kpi{border:1px solid var(--line);background:var(--panel);box-shadow:var(--shadow);border-radius:var(--radius);padding:19px;min-width:0;position:relative}.kpi-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:15px}.kpi-label{color:var(--muted);font-size:12px;font-weight:650}.kpi-icon{width:34px;height:34px;border-radius:10px;background:var(--brandlight);display:grid;place-items:center;color:var(--brand)}.kpi-icon svg{width:16px;height:16px}.kpi-icon.green{background:#e3f7f1;color:var(--green)}.kpi-icon.amber{background:#fff5e4;color:var(--amber)}.kpi-icon.blue{background:#e9f4ff;color:#4686d3}.kpi-value{font-weight:820;letter-spacing:-.9px;font-size:clamp(19px,1.8vw,28px);white-space:nowrap}.kpi-value span{font-size:12px;letter-spacing:0;color:var(--muted);font-weight:600;margin-left:4px}.kpi-note{font-size:11px;color:var(--muted);margin-top:8px;min-height:19px}.mini-progress{height:5px;border-radius:10px;overflow:hidden;background:var(--line);margin-top:13px}.mini-progress>span{display:block;height:100%;background:var(--green);border-radius:10px}.section-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(310px,.75fr);gap:16px;margin-bottom:20px}.panel{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;min-width:0}.panel-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:21px}.panel h2{font-size:16px;font-weight:800;letter-spacing:-.3px;margin:0 0 4px}.panel-desc{color:var(--muted);font-size:11px}.subtle-pill{background:var(--panel2);border:1px solid var(--line);color:var(--muted);font-size:10px;font-weight:700;padding:6px 9px;border-radius:8px;white-space:nowrap}.overview-flex{display:flex;align-items:center;justify-content:space-around;gap:25px;min-height:210px}.donut-wrap{position:relative;width:min(210px,43%);aspect-ratio:1;flex-shrink:0}.donut{height:100%;width:100%;border-radius:50%;background:conic-gradient(var(--green) 0 62.9%,#e8edf4 62.9% 100%);display:grid;place-items:center}.donut-center{border-radius:50%;background:var(--panel);width:70%;height:70%;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 0 1px var(--line)}.donut-center strong{font-size:clamp(22px,2.5vw,33px);font-weight:850;letter-spacing:-1px;line-height:1}.donut-center span{font-size:11px;color:var(--muted);margin-top:9px;font-weight:600}.donut-list{display:flex;flex-direction:column;gap:23px;min-width:165px}.legend-item{display:flex;align-items:flex-start;gap:9px}.legend-dot{height:10px;width:10px;border-radius:4px;margin-top:5px;flex-shrink:0}.legend-label{font-size:12px;color:var(--muted);font-weight:600}.legend-value{font-size:17px;font-weight:800;letter-spacing:-.5px}.compare-title{font-size:12px;font-weight:700;margin:8px 0 21px}.period-row{margin:16px 0 24px}.period-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px;font-size:11px;font-weight:650}.period-meta span{color:var(--muted)}.period-meta strong{font-size:12px;color:var(--ink)}.period-track{height:11px;background:var(--panel2);border-radius:8px;overflow:hidden}.period-fill{height:100%;border-radius:8px;min-width:0;transition:width .35s}.context-note{background:var(--panel2);border-radius:10px;padding:13px;color:var(--muted);font-size:11px;line-height:1.7}.context-note b{color:var(--ink)}.chart-grid{display:grid;grid-template-columns:minmax(290px,.83fr) minmax(0,1.17fr);gap:16px;margin-bottom:21px}.program-stack{display:flex;flex-direction:column;gap:20px}.program-info{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.program-name{font-size:12px;font-weight:750;max-width:74%}.program-code{font-size:10px;font-weight:750;color:var(--brand);margin-bottom:2px}.program-val{font-size:11px;font-weight:800;white-space:nowrap}.program-sub{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin-top:7px}.stack-track{height:9px;border-radius:20px;background:var(--line);overflow:hidden;margin-top:10px}.stack-track span{display:block;background:linear-gradient(90deg,#535bcf,#7c8cef);height:100%;border-radius:20px}.activities{display:flex;flex-direction:column;gap:14px;max-height:390px;overflow:auto;padding-right:5px}.activity-row{border:0;background:transparent;width:100%;text-align:left;cursor:pointer;padding:2px 0 8px;color:var(--ink);border-bottom:1px dashed var(--line)}.activity-row:hover .activity-text{color:var(--brand)}.activity-top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:7px}.activity-text{font-size:11px;font-weight:650;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.activity-percent{font-size:11px;font-weight:800;white-space:nowrap}.activity-track{height:8px;border-radius:10px;background:#e8edf5;position:relative;overflow:hidden}.activity-track span{height:100%;position:absolute;left:0;top:0;background:#6976d6;border-radius:10px}.activity-foot{font-size:10px;color:var(--muted);display:flex;justify-content:space-between;margin-top:5px;gap:12px}.chart-header-select{border:1px solid var(--line);background:var(--panel2);border-radius:8px;padding:6px;color:var(--ink);font-size:11px}.table-panel{padding:0;overflow:hidden;scroll-margin-top:18px}.table-titlebar{padding:22px 22px 16px}.table-toolbar{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:flex-end}.table-heading h2{margin-bottom:5px}.table-tools{display:flex;align-items:center;flex-wrap:wrap;gap:9px}.search-wrap{position:relative;min-width:245px}.search-wrap svg{position:absolute;width:16px;height:16px;left:12px;top:12px;color:var(--muted)}.search-wrap input{padding:10px 12px 10px 36px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;width:100%;font-size:12px;color:var(--ink)}.table-select{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);font-size:12px;color:var(--ink);max-width:170px}.focusbar{display:none;margin-top:16px;background:var(--brandlight);border:1px solid #c9d0fc;border-radius:10px;padding:9px 12px;color:#424da3;font-size:11px;align-items:center;justify-content:space-between;gap:12px}.focusbar.show{display:flex}.focusbar button{border:0;background:transparent;color:inherit;font-weight:800}.table-wrap{width:100%;overflow-x:auto}.data-table{border-collapse:collapse;width:100%;min-width:1050px}.data-table thead{background:var(--panel2);color:var(--muted)}.data-table th{white-space:nowrap;text-align:right;padding:12px 13px;font-size:10px;font-weight:750;border-bottom:1px solid var(--line);cursor:pointer}.data-table th:first-child,.data-table th:nth-child(2){text-align:left}.data-table th[data-sort]:hover{color:var(--brand)}.data-table tbody tr{border-bottom:1px solid var(--line)}.data-table tbody tr:last-child{border-bottom:0}.data-table tbody tr:hover{background:var(--panel2)}.data-table td{padding:14px 13px;text-align:right;font-size:11px;white-space:nowrap}.data-table td:first-child,.data-table td:nth-child(2){text-align:left}.code-tag{font-size:10px;background:var(--brandlight);color:var(--brand);padding:5px 7px;border-radius:6px;font-weight:800}.row-name{font-size:11px;font-weight:700;display:block;white-space:normal;min-width:185px;max-width:340px;line-height:1.4}.row-action{font-size:10px;color:var(--brand);font-weight:700;cursor:pointer;border:0;background:transparent;padding:4px 0}.row-action:hover{text-decoration:underline}.td-progress{display:flex;align-items:center;justify-content:flex-end;gap:8px;font-weight:800}.td-progress .track{height:5px;width:44px;background:#e8edf4;border-radius:8px;overflow:hidden}.td-progress .track i{display:block;height:100%;background:var(--green);border-radius:8px}.status{display:inline-block;padding:5px 8px;border-radius:7px;font-size:10px;font-weight:750;background:#f0f2fb;color:#6977a7}.status.strong{background:#e2f7f0;color:#07856c}.status.mid{background:#eaf0ff;color:#536bc9}.status.zero{background:#f3f4f7;color:#929bad}.empty{text-align:center!important;padding:38px!important;color:var(--muted)}.table-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 22px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}.pagination{display:flex;gap:6px}.pagination button{border:1px solid var(--line);color:var(--ink);background:var(--panel);border-radius:7px;padding:6px 10px;font-weight:750}.pagination button:disabled{opacity:.4;cursor:default}.help-strip{display:flex;align-items:flex-start;gap:12px;margin-top:18px;color:var(--muted);font-size:11px;padding:14px 4px}.help-strip svg{width:18px;height:18px;color:var(--brand);margin-top:1px}.help-strip strong{color:var(--ink)}.main-footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:25px;padding:20px 0;color:var(--muted);border-top:1px solid var(--line);font-size:11px}.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(14,24,45,.57);z-index:30;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(3px)}.modal-backdrop.open{display:flex}.modal{background:var(--panel);color:var(--ink);border-radius:20px;max-width:620px;width:100%;max-height:85vh;overflow:auto;padding:26px;box-shadow:0 28px 90px #07132966}.modal-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.modal small{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--brand)}.modal h2{font-size:20px;line-height:1.35;margin:9px 0 6px;letter-spacing:-.4px}.modal-path{font-size:11px;color:var(--muted);line-height:1.8;margin:14px 0 22px}.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.detail-box{border:1px solid var(--line);background:var(--panel2);padding:14px;border-radius:10px}.detail-box span{display:block;font-size:11px;color:var(--muted)}.detail-box strong{display:block;font-size:17px;margin-top:5px}.modal-buttons{display:flex;gap:9px;margin-top:20px;flex-wrap:wrap}.dark{color-scheme:dark;--bg:#10192a;--panel:#1a263a;--panel2:#202d43;--ink:#eef3ff;--muted:#a3b0c6;--line:#30405b;--brand:#a3acff;--brandlight:#2a365f;--green:#54d4b0;--amber:#fac577;--shadow:0 12px 36px rgba(0,0,0,.08)}.dark .activity-track,.dark .td-progress .track,.dark .donut{--dummy:0}.dark .activity-track,.dark .td-progress .track{background:#35445d}.dark .kpi-icon.green{background:#223f3d}.dark .kpi-icon.amber{background:#493c34}.dark .kpi-icon.blue{background:#223c54}.dark .focusbar{background:#293659;border-color:#414e87;color:#c6cbff}.dark .status.strong{background:#20473f;color:#75e5bf}.dark .status.mid{background:#243f60;color:#a2b8ff}.dark .status.zero{background:#2d3545;color:#a1aabe}.dark .status{background:#343e5a;color:#b2c0eb}.dark .code-tag{color:#bbc2ff}.dark .donut{background:conic-gradient(var(--green) 0 62.9%,#34435a 62.9% 100%)}
+@media(max-width:1250px){.main{padding:22px}.sidebar{width:202px}.main{width:calc(100% - 202px)}.kpis{gap:10px}.kpi{padding:15px}.section-grid{grid-template-columns:1fr 1fr}.overview-flex{gap:12px}.donut-list{min-width:130px}.donut-wrap{width:44%}.chart-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:970px){.sidebar{display:none}.main{width:100%;padding:20px}.section-grid,.chart-grid{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(2,1fr)}.kpi-value{font-size:25px}}
+@media(max-width:720px){.main{padding:15px}.date-pill{display:none}.headline h1{font-size:29px}.headline{align-items:flex-start}.filter-bar{grid-template-columns:1fr 1fr}.reset-btn{grid-column:1/-1}.section-grid,.chart-grid{grid-template-columns:1fr}.kpis{gap:9px}.kpi{padding:15px}.kpi-value{font-size:clamp(18px,5vw,25px)}.kpi-note{font-size:10px}.overview-flex{justify-content:center}.donut-wrap{width:min(190px,48%)}.table-tools{width:100%}.search-wrap{min-width:0;flex:1}.table-select{max-width:145px}.export-btn{padding:10px}.table-footer{flex-direction:column;align-items:flex-start}.main-footer{flex-direction:column}.panel{padding:18px}.table-panel{padding:0}.detail-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:390px){.filter-bar{grid-template-columns:1fr}.reset-btn{grid-column:1}.kpi-value{font-size:18px}.donut-wrap{width:44%}.donut-list{min-width:0}.legend-value{font-size:14px}.table-select{max-width:none}}
+
+/* Hierarki detail interaktif hingga baris item belanja */
+.modal.hierarchy-modal{max-width:1050px;width:min(1050px,98vw)}
+.hierarchy-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin:22px 0 11px}
+.hierarchy-head h3{font-size:15px;margin:0}.hierarchy-tools{display:flex;gap:8px;flex-wrap:wrap}
+.hierarchy-tools button{border:1px solid var(--line);background:var(--panel2);color:var(--ink);padding:7px 11px;border-radius:8px;font-size:11px;font-weight:700}
+.hierarchy-list{max-height:48vh;overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.hierarchy-node{border-bottom:1px solid var(--line)}.hierarchy-node:last-child{border-bottom:0}
+.hierarchy-node>summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:minmax(150px,1fr) repeat(3,minmax(90px,130px));gap:10px;align-items:center;padding:10px 12px;min-height:58px}
+.hierarchy-node>summary::-webkit-details-marker{display:none}.hierarchy-node>summary:hover{background:var(--panel2)}
+.hierarchy-label{min-width:0;display:flex;gap:7px;align-items:flex-start}.hierarchy-label b{font-size:10px;color:var(--brand);white-space:nowrap}.hierarchy-label span{font-size:11px;line-height:1.4;overflow-wrap:anywhere}
+.hierarchy-toggle{font-weight:800;color:var(--brand);min-width:12px}.hierarchy-node[open]>summary .hierarchy-toggle{transform:rotate(90deg)}
+.hierarchy-number{text-align:right;font-size:11px;font-variant-numeric:tabular-nums}.hierarchy-number small{display:block;color:var(--muted);font-size:9px}
+.hierarchy-children{margin-left:15px;border-left:2px solid var(--brandlight)}.hierarchy-static{display:grid;grid-template-columns:minmax(150px,1fr) repeat(3,minmax(90px,130px));gap:10px;align-items:center;padding:10px 12px;min-height:58px}.hierarchy-leaf{cursor:default}.hierarchy-leaf .hierarchy-toggle{color:var(--muted)}.hierarchy-note{font-size:11px;color:var(--muted);margin-bottom:10px}
+@media(max-width:650px){.hierarchy-node>summary,.hierarchy-static{grid-template-columns:minmax(0,1fr) minmax(86px,110px);gap:6px}.hierarchy-number.extra{display:none}.hierarchy-children{margin-left:9px}.modal.hierarchy-modal{padding:15px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="logo"><div class="logo-icon">S<span style="color:#cfd4ff">.</span></div><div><div class="brand-title">SP2D Insight</div><div class="brand-sub">FINANCIAL ANALYTICS</div></div></div>
+  <div class="nav-label">MENU UTAMA</div>
+  <a class="nav-link active" href="#ringkasan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Ringkasan</a>
+  <a class="nav-link" href="#analisis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V13M10 20V4M16 20v-8M22 20V9"/></svg>Analisis anggaran</a>
+  <a class="nav-link" href="#rincian"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="7" cy="6" r="1"/></svg>Rincian data</a>
+  <a class="nav-link" href="#sumber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg>Info sumber</a>
+  <div class="side-spacer"></div>
+  <div class="source-mini"><strong><span class="dot"></span>Belum ada data Excel</strong><span>Unggah Excel untuk mulai</span><div style="margin-top:11px;border-top:1px solid #35435b;padding-top:9px;color:#a9b5cc;font-size:11px">Data diproses secara lokal</div></div>
+  <div class="side-foot">SP2D Insight · Dashboard offline</div>
+</aside>
+<main class="main">
+  <div class="topbar"><div class="crumb">Laporan Keuangan <span>/</span> <b>Dashboard Realisasi SP2D</b></div><div class="top-actions"><button class="export-btn" id="uploadButton" type="button">↑ Upload Excel</button><input type="file" id="excelUpload" accept=".xlsx" hidden><div class="date-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 2v6M16 2v6"/></svg>Belum ada data</div><button class="icon-btn" id="themeToggle" aria-label="Ganti tema" title="Ganti tema"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 15.5A8 8 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg></button></div></div>
+  <header class="headline" id="ringkasan"><div><div class="eyebrow">Dashboard kinerja anggaran</div><h1>Realisasi Anggaran</h1><div class="subtitle"><strong>Belum ada file Excel yang diunggah</strong></div></div></header>
+  <section class="filter-bar" aria-label="Filter utama"><div class="field"><label for="programSelect">PROGRAM</label><div class="select-wrap"><select id="programSelect"><option value="">Semua program</option></select></div></div><div class="field"><label for="activitySelect">KEGIATAN</label><div class="select-wrap"><select id="activitySelect"><option value="">Semua kegiatan</option></select></div></div><button id="resetAll" class="reset-btn">↺ &nbsp;Reset filter</button></section>
+  <section class="kpis" aria-label="Indikator keuangan utama">
+    <article class="kpi"><div class="kpi-head"><span class="kpi-label">Total pagu revisi</span><div class="kpi-icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" fill="none"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M6 7V4h13v3M3 12h18"/></svg></div></div><div class="kpi-value" id="kpiBudget">—</div><div class="kpi-note" id="noteBudget">Anggaran keseluruhan</div></article>
+    <article class="kpi"><div class="kpi-head"><span class="kpi-label">Realisasi kumulatif</span><div class="kpi-icon green"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" fill="none"><path d="M4 17l5-6 4 3 7-9M14 5h6v6"/></svg></div></div><div class="kpi-value" id="kpiSpent">—</div><div class="kpi-note" id="noteSpent">Persentase penyerapan</div><div class="mini-progress"><span id="kpiSpentBar"></span></div></article>
+    <article class="kpi"><div class="kpi-head"><span class="kpi-label">Sisa anggaran</span><div class="kpi-icon amber"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" fill="none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div></div><div class="kpi-value" id="kpiRemain">—</div><div class="kpi-note" id="noteRemain">Belum terealisasi</div></article>
+    <article class="kpi"><div class="kpi-head"><span class="kpi-label">Realisasi periode ini</span><div class="kpi-icon blue"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" fill="none"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 2v6M16 2v6"/></svg></div></div><div class="kpi-value" id="kpiCurrent">—</div><div class="kpi-note" id="noteCurrent">Pengeluaran periode ini</div></article>
+  </section>
+  <section class="section-grid" id="analisis">
+   <article class="panel"><div class="panel-header"><div><h2>Tingkat Penyerapan Anggaran</h2><div class="panel-desc">Realisasi kumulatif terhadap pagu revisi</div></div><span class="subtle-pill">Menunggu Excel</span></div><div class="overview-flex"><div class="donut-wrap"><div class="donut" id="donut"><div class="donut-center"><strong id="donutRate">—</strong><span>Realisasi</span></div></div></div><div class="donut-list"><div class="legend-item"><span class="legend-dot" style="background:var(--green)"></span><div><div class="legend-label">Terealisasi</div><div class="legend-value" id="donutSpent">—</div></div></div><div class="legend-item"><span class="legend-dot" style="background:#cad2e4"></span><div><div class="legend-label">Sisa anggaran</div><div class="legend-value" id="donutRemain">—</div></div></div></div></div></article>
+   <article class="panel"><div class="panel-header"><div><h2>Perbandingan Realisasi</h2><div class="panel-desc">Perbandingan periode sebelumnya dan periode laporan</div></div></div><div class="compare-title">Komposisi realisasi sampai dengan periode laporan</div><div class="period-row"><div class="period-meta"><span>Periode lalu (kumulatif)</span><strong id="prevAmount">—</strong></div><div class="period-track"><div class="period-fill" id="prevBar" style="background:#7a86db"></div></div></div><div class="period-row"><div class="period-meta"><span>Periode ini (Oktober)</span><strong id="currentAmount">—</strong></div><div class="period-track"><div class="period-fill" id="currentBar" style="background:var(--green)"></div></div></div><div class="context-note" id="monthNote">Data periode ini merupakan realisasi pada Oktober, bukan total kumulatif tahun berjalan.</div></article>
+  </section>
+  <section class="chart-grid">
+   <article class="panel"><div class="panel-header"><div><h2>Realisasi per Program</h2><div class="panel-desc">Pagu dan persentase penyerapan tiap program</div></div></div><div class="program-stack" id="programChart"></div></article>
+   <article class="panel"><div class="panel-header"><div><h2>Kinerja per Kegiatan</h2><div class="panel-desc">Kegiatan berdasarkan besaran pagu atau penyerapan</div></div><select class="chart-header-select" id="chartSort" aria-label="Urutkan chart"><option value="budget">Pagu terbesar</option><option value="spent">Realisasi terbesar</option><option value="rate">Penyerapan tertinggi</option></select></div><div class="activities" id="activityChart"></div></article>
+  </section>
+  <section class="panel table-panel" id="rincian">
+   <div class="table-titlebar"><div class="table-toolbar"><div class="table-heading"><h2>Eksplorasi Rincian Anggaran</h2><div class="panel-desc" id="tableSubtitle">Telusuri hierarki anggaran. Klik detail untuk menelusuri tingkat berikutnya.</div></div><div class="table-tools"><div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4.5 4.5"/></svg><input id="searchInput" type="search" placeholder="Cari kode atau uraian..." aria-label="Cari rincian" /></div><select class="table-select" id="levelSelect" aria-label="Tingkat hierarki"><option value="0">Program</option><option value="1" selected>Kegiatan</option><option value="2">Output</option><option value="3">Suboutput</option><option value="4">Komponen</option><option value="5">Subkomponen</option><option value="6">Akun</option><option value="7">Item belanja</option></select><button class="export-btn" id="exportCsv">↓ &nbsp;Unduh CSV</button></div></div><div class="focusbar" id="focusBar"><span id="focusText"></span><button id="goUp">↑ Naik level</button><button id="clearFocus">✕ Hapus fokus</button></div></div>
+   <div class="table-wrap"><table class="data-table"><thead><tr><th data-sort="code">Kode ↕</th><th data-sort="name">Uraian ↕</th><th data-sort="budget">Pagu revisi ↕</th><th data-sort="spent">Realisasi s.d. ↕</th><th data-sort="rate">Penyerapan ↕</th><th data-sort="this">Periode ini ↕</th><th data-sort="remain">Sisa ↕</th><th>Status</th></tr></thead><tbody id="dataRows"></tbody></table></div>
+   <div class="table-footer"><span id="rowsSummary">—</span><div class="pagination"><button id="prevPage" aria-label="Halaman sebelumnya">←</button><span id="pageText" style="padding:6px 9px;font-weight:700;color:var(--ink)">1 / 1</span><button id="nextPage" aria-label="Halaman berikutnya">→</button></div></div>
+  </section>
+  <div id="uploadStatus" role="status" aria-live="polite" style="display:none;margin-top:15px;padding:13px 16px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink)"></div>
+  <section class="help-strip" id="sumber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 7h.01"/></svg><div><strong>Catatan perhitungan:</strong> Semua nilai diakumulasi dari <strong id="itemCountNote">0 baris rincian</strong> (level terakhir yang tersedia), sehingga subtotal hierarki tidak dihitung ganda. Realisasi s.d. periode = periode lalu + periode ini. Sumber: file Excel “Laporan FA Detail (16 Segmen)”. Gunakan <strong>Upload Excel</strong> untuk mengganti data secara langsung. Berkas diproses lokal di browser dan tidak dikirim ke server. Jumlah "Lock Pagu" belum tentu mencerminkan dana yang telah dibelanjakan.</div></section>
+  <footer class="main-footer"><span>SP2D Insight · Kantor Pertanahan Kab. Gorontalo · TA 2026</span><span>Belum ada data · Berjalan secara offline</span></footer>
+</main>
+</div>
+<div class="modal-backdrop" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal hierarchy-modal"><div class="modal-top"><div><small id="modalCode">DETAIL</small><h2 id="modalTitle">—</h2></div><button id="closeModal" class="icon-btn" aria-label="Tutup detail">✕</button></div><div class="modal-path" id="modalPath"></div><div class="detail-grid" id="detailGrid"></div><div class="hierarchy-head"><h3>Rincian Hierarki Anggaran</h3><div class="hierarchy-tools"><button type="button" id="expandHierarchy">Buka semua</button><button type="button" id="collapseHierarchy">Tutup semua</button></div></div><div id="hierarchyNote" class="hierarchy-note"></div><div id="hierarchyList" class="hierarchy-list"></div><div class="modal-buttons"><button class="export-btn" id="drillModal">Telusuri detail ↓</button><button class="ghost-btn" id="dismissModal">Tutup</button></div></div></div>
+<script type="application/json" id="embeddedData">{"meta":{},"nodes":[]}</script>
+<script>
+(()=>{'use strict';
+let dataset=JSON.parse(document.querySelector('#embeddedData').textContent);
+let nodes=dataset.nodes;const levels=['Program','Kegiatan','Output','Suboutput','Komponen','Subkomponen','Akun','Item belanja'];
+let items=[]; let childIds=new Map(); let deepestLevel=0;
+let nodeById=new Map(nodes.map(n=>[n.id,n]));
+const sel=(x)=>document.getElementById(x);
+const esc=(s)=>String(s??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const number=n=>new Intl.NumberFormat('id-ID',{maximumFractionDigits:0}).format(Math.round(n||0));
+const compact=n=>{let a=Math.abs(n||0);if(a>=1e12)return(n/1e12).toLocaleString('id-ID',{maximumFractionDigits:2})+' T';if(a>=1e9)return(n/1e9).toLocaleString('id-ID',{maximumFractionDigits:2})+' M';if(a>=1e6)return(n/1e6).toLocaleString('id-ID',{maximumFractionDigits:2})+' jt';if(a>=1e3)return(n/1e3).toLocaleString('id-ID',{maximumFractionDigits:1})+' rb';return number(n)};
+const rp=n=>'Rp '+number(n);
+const pct=n=>(100*(n||0)).toLocaleString('id-ID',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
+const ratio=(s,b)=>b? s/b:0;const clamp=(n,a=0,b=100)=>Math.min(b,Math.max(a,n));
+const mkStats=()=>({budget:0,lock:0,prev:0,this:0,spent:0,remain:0,count:0});
+const addStats=(dst,node)=>{for(const key of ['budget','lock','prev','this','spent','remain'])dst[key]+=node[key];dst.count++};
+const getStats=rows=>{let s=mkStats();rows.forEach(n=>addStats(s,n));return s};
+const ancestor=(leaf,level)=>leaf.path.find(id=>nodeById.get(id)?.level===level)??null;
+let state={program:'',activity:'',focus:null,level:1,search:'',sortKey:'budget',sortDir:-1,page:0,pageSize:12,chartSort:'budget'};
+let visibleRows=[],activeItems=[],currentStats=mkStats(),detailNode=null;
+let allPrograms=nodes.filter(n=>n.level===0),allActivities=nodes.filter(n=>n.level===1);
+function filteredItems(){return items.filter(n=>(!state.program||String(ancestor(n,0))===state.program)&&(!state.activity||String(ancestor(n,1))===state.activity)&&(state.focus===null||n.path.includes(state.focus)))}
+function grouping(leaves,lev){const m=new Map();for(const item of leaves){const id=ancestor(item,lev)??(item.level<lev?item.id:null);if(id===null)continue;let group=m.get(id);if(!group){group={...nodeById.get(id),...mkStats()};m.set(id,group)}addStats(group,item)}return [...m.values()].map(n=>({...n,rate:ratio(n.spent,n.budget)}))}
+function showMoney(id,n){sel(id).textContent=nodes.length?compact(n):'—';sel(id).title=nodes.length?rp(n):'Belum ada data'}
+function setOptions(){let phtml='<option value="">Semua program</option>';for(const p of allPrograms){phtml+=`<option value="${p.id}">${esc(p.code)} · ${esc(p.name)}</option>`}sel('programSelect').innerHTML=phtml;sel('programSelect').value=state.program;
+ let relevant=allActivities.filter(a=>!state.program||nodes.some(n=>n.id===a.parent&&String(n.id)===state.program));if(state.activity&&!relevant.some(n=>String(n.id)===state.activity))state.activity='';let ahtml='<option value="">Semua kegiatan</option>';for(const a of relevant){ahtml+=`<option value="${a.id}">${esc(a.code)} · ${esc(a.name)}</option>`}sel('activitySelect').innerHTML=ahtml;sel('activitySelect').value=state.activity}
+function renderKpis(){const s=currentStats;showMoney('kpiBudget',s.budget);showMoney('kpiSpent',s.spent);showMoney('kpiRemain',s.remain);showMoney('kpiCurrent',s.this);
+ sel('noteBudget').textContent=nodes.length?number(s.count)+' rincian akhir tercakup':'Upload Excel untuk memulai';sel('noteSpent').textContent=nodes.length?pct(ratio(s.spent,s.budget))+' dari pagu revisi':'Belum ada data';sel('noteRemain').textContent=nodes.length?pct(ratio(s.remain,s.budget))+' dari pagu revisi':'Belum ada data';sel('noteCurrent').textContent=nodes.length?pct(ratio(s.this,s.spent))+' dari realisasi kumulatif':'Belum ada data';sel('kpiSpentBar').style.width=clamp(ratio(s.spent,s.budget)*100)+'%';
+ let rate=clamp(ratio(s.spent,s.budget)*100);sel('donutRate').textContent=nodes.length?pct(ratio(s.spent,s.budget)):'—';sel('donut').style.background=`conic-gradient(var(--green) 0 ${rate}%, ${document.body.classList.contains('dark')?'#34435a':'#e8edf4'} ${rate}% 100%)`;showMoney('donutSpent',s.spent);showMoney('donutRemain',s.remain);sel('prevAmount').textContent=nodes.length?compact(s.prev):'—';sel('prevAmount').title=rp(s.prev);sel('currentAmount').textContent=nodes.length?compact(s.this):'—';sel('currentAmount').title=rp(s.this);
+ const max=Math.max(s.prev,s.this,1);sel('prevBar').style.width=clamp(s.prev/max*100)+'%';sel('currentBar').style.width=clamp(s.this/max*100)+'%';sel('monthNote').innerHTML=nodes.length?`Dari realisasi kumulatif, <b>${pct(ratio(s.this,s.spent))}</b> terjadi pada ${esc(dataset.meta.period||"periode laporan")}. Pagu terkunci: <b>${rp(s.lock)}</b>.`:'Upload Excel untuk menampilkan perbandingan periode.'}
+function renderCharts(){const progs=grouping(activeItems,0);const maxPagu=Math.max(...progs.map(n=>n.budget),1);sel('programChart').innerHTML=progs.length?progs.sort((a,b)=>b.budget-a.budget).map(n=>`<div class="program-entry"><div class="program-info"><div><div class="program-code">${esc(n.code)}</div><div class="program-name">${esc(n.name)}</div></div><div class="program-val">${pct(n.rate)}</div></div><div class="stack-track" title="${esc(rp(n.spent))} terealisasi"><span style="width:${clamp(n.rate*100)}%"></span></div><div class="program-sub"><span>Pagu ${compact(n.budget)}</span><span>Realisasi ${compact(n.spent)}</span></div></div>`).join(''):'<p class="panel-desc">Tidak ada program untuk filter ini.</p>';
+ let acts=grouping(activeItems,1);let sort=state.chartSort;acts.sort((a,b)=>b[sort]-a[sort]);sel('activityChart').innerHTML=acts.length?acts.slice(0,9).map(n=>`<button class="activity-row" data-id="${n.id}" title="Telusuri ${esc(n.name)}"><div class="activity-top"><span class="activity-text">${esc(n.code)} · ${esc(n.name)}</span><span class="activity-percent">${pct(n.rate)}</span></div><div class="activity-track"><span style="width:${clamp(n.rate*100)}%"></span></div><div class="activity-foot"><span>Pagu ${compact(n.budget)}</span><span>Realisasi ${compact(n.spent)}</span></div></button>`).join(''):'<p class="panel-desc">Tidak ada kegiatan untuk filter ini.</p>';}
+function statusFor(n){if(!n.budget)return'<span class="status zero">Tanpa pagu</span>';if(n.rate>=.9)return'<span class="status strong">≥ 90%</span>';if(n.rate>=.6)return'<span class="status mid">60–90%</span>';return'<span class="status">&lt; 60%</span>'}
+function sortRows(rows){let k=state.sortKey, dir=state.sortDir;rows.sort((a,b)=>{let x=a[k],y=b[k];if(typeof x==='string')return dir*x.localeCompare(y,'id',{numeric:true});return dir*((x||0)-(y||0))});return rows}
+function renderTable(){
+ let rows=grouping(activeItems,state.level);
+ const q=state.search.trim().toLocaleLowerCase('id-ID');
+ if(q)rows=rows.filter(n=>(n.code+' '+n.name).toLocaleLowerCase('id-ID').includes(q));
+ visibleRows=sortRows(rows);
+ const pages=Math.max(1,Math.ceil(rows.length/state.pageSize));state.page=Math.min(state.page,pages-1);
+ const pageRows=rows.slice(state.page*state.pageSize,(state.page+1)*state.pageSize);
+ sel('dataRows').innerHTML=pageRows.length?pageRows.map(n=>{
+  const hasChildren=(childIds.get(n.id)||[]).length>0;
+  return `<tr><td><span class="code-tag">${esc(n.code)}</span></td><td><span class="row-name">${esc(n.name)}</span><button type="button" class="row-action" data-detail="${n.id}">${hasChildren?'Lihat detail →':'Lihat rincian ↗'}</button></td><td>${rp(n.budget)}</td><td><strong>${rp(n.spent)}</strong></td><td><div class="td-progress"><div class="track"><i style="width:${clamp(n.rate*100)}%"></i></div>${pct(n.rate)}</div></td><td>${rp(n.this)}</td><td>${rp(n.remain)}</td><td>${statusFor(n)}</td></tr>`;
+ }).join(''):`<tr><td class="empty" colspan="8">${nodes.length?'Tidak ada data pada tingkat ini. Pilih tingkat yang tersedia atau ubah filter.':'Belum ada data. Klik “Upload Excel” untuk memulai.'}</td></tr>`;
+ sel('rowsSummary').textContent=`Menampilkan ${rows.length?state.page*state.pageSize+1:0}–${Math.min(rows.length,(state.page+1)*state.pageSize)} dari ${number(rows.length)} ${levels[state.level].toLowerCase()}`;
+ sel('pageText').textContent=`${state.page+1} / ${pages}`;
+ sel('prevPage').disabled=state.page===0;sel('nextPage').disabled=state.page>=pages-1;
+ sel('tableSubtitle').textContent=nodes.length?`Tingkat: ${levels[state.level]}. Rincian hanya dapat dibuka bila ada tingkat di bawahnya.`:'Unggah file Excel untuk mengisi dashboard dan menjelajahi rincian anggaran.';
+ sel('levelSelect').value=String(state.level);
+ const focus=state.focus===null?null:nodeById.get(state.focus);
+ sel('focusBar').classList.toggle('show',!!focus);sel('focusText').textContent=focus?'Fokus: '+focus.code+' · '+focus.name:'';
+}
+
+function render(){activeItems=filteredItems();currentStats=getStats(activeItems);renderKpis();renderCharts();renderTable()}
+function filterChanged(){state.focus=null;state.page=0;render()}
+function drill(n){const children=childIds.get(n.id)||[];if(!children.length){openDetail(n.id);return}state.focus=n.id;state.level=nodes.find(x=>x.id===children[0]).level;state.search='';state.page=0;sel('searchInput').value='';sel('levelSelect').value=state.level;sel('detailsModal').classList.remove('open');render();document.querySelector('#rincian').scrollIntoView({behavior:'smooth',block:'start'})}
+function goUp(){if(state.focus===null)return;let node=nodeById.get(state.focus);state.focus=node.parent;state.level=node.level;state.search='';state.page=0;sel('searchInput').value='';render()}
+function pathTo(n){let res=[];let k=n;while(k){res.push(k);k=k.parent===null?null:nodeById.get(k.parent)}return res.reverse()}
+function renderHierarchy(root,members){
+ const totals=new Map(),included=new Set();
+ for(const leaf of members){for(const id of leaf.path){included.add(id);if(!totals.has(id))totals.set(id,mkStats());addStats(totals.get(id),leaf)}}
+ const draw=n=>{
+  const children=(childIds.get(n.id)||[]).map(id=>nodeById.get(id)).filter(ch=>included.has(ch.id));
+  const v=totals.get(n.id)||getStats([n]);const hasChildren=children.length>0;
+  const title=`<div class="hierarchy-label"><span class="hierarchy-toggle">${hasChildren?'▸':'•'}</span><div><small style="display:block;color:var(--muted);font-size:9px">${esc(levels[n.level])}</small><b>${esc(n.code)}</b><span>${esc(n.name)}</span></div></div>`;
+  const numbers=`<div class="hierarchy-number"><small>Pagu</small>${esc(compact(v.budget))}</div><div class="hierarchy-number extra"><small>Realisasi</small>${esc(compact(v.spent))}</div><div class="hierarchy-number extra"><small>Sisa / Serapan</small>${esc(compact(v.remain))} · ${pct(ratio(v.spent,v.budget))}</div>`;
+  if(!hasChildren)return `<div class="hierarchy-node hierarchy-leaf"><div class="hierarchy-static">${title}${numbers}</div></div>`;
+  return `<details class="hierarchy-node" ${n.id===root.id?'open':''}><summary>${title}${numbers}</summary><div class="hierarchy-children">${children.map(draw).join('')}</div></details>`;
+ };
+ sel('hierarchyList').innerHTML=draw(root);
+ const maxLevel=Math.max(root.level,...members.map(n=>n.level));
+ sel('hierarchyNote').textContent=`${number(members.length)} rincian akhir dalam cabang ini · Tingkat terdalam: ${levels[maxLevel]}. Baris tanpa anak tidak memiliki dropdown.`;
+ sel('expandHierarchy').disabled=sel('collapseHierarchy').disabled=!sel('hierarchyList').querySelector('details');
+}
+function openDetail(id){
+ const n=nodeById.get(id);if(!n)return;detailNode=n;
+ const members=items.filter(x=>x.path.includes(id));const d=getStats(members);
+ sel('modalCode').textContent=levels[n.level].toUpperCase()+' · '+n.code;sel('modalTitle').textContent=n.name;
+ sel('modalPath').textContent=pathTo(n).map(x=>x.code+' '+x.name).join('  ›  ');
+ const period=dataset.meta.period||'periode laporan';
+ const boxes=[['Pagu revisi',d.budget],['Realisasi kumulatif',d.spent],['Realisasi periode ini',d.this],['Sisa anggaran',d.remain],['Periode lalu',d.prev],['Lock pagu',d.lock]];
+ sel('detailGrid').innerHTML=boxes.map(([label,v])=>`<div class="detail-box"><span>${esc(label)}</span><strong title="${esc(rp(v))}">${esc(compact(v))}</strong></div>`).join('')+`<div class="detail-box" style="grid-column:1/-1"><span>Persentase penyerapan</span><strong>${pct(ratio(d.spent,d.budget))}</strong><div class="mini-progress"><span style="width:${clamp(ratio(d.spent,d.budget)*100)}%"></span></div></div>`;
+ renderHierarchy(n,members);
+ sel('drillModal').style.display=(childIds.get(n.id)||[]).length?'inline-flex':'none';
+ sel('detailsModal').classList.add('open');
+}
+
+function csvCell(value){const str=String(value??'');const safe=/^[=+\-@]/.test(str)?"'"+str:str;return '"'+safe.replace(/"/g,'""')+'"'}
+function exportCsv(){let header=['Tingkat','Kode','Uraian','Pagu revisi','Lock pagu','Periode lalu','Periode ini','Realisasi s.d.','Persen realisasi','Sisa anggaran'];const lines=[header.map(csvCell).join(';')];for(const n of visibleRows){lines.push([levels[n.level],n.code,n.name,n.budget,n.lock,n.prev,n.this,n.spent,(n.rate*100).toFixed(2),n.remain].map(csvCell).join(';'))}const blob=new Blob(['\ufeff'+lines.join('\r\n')],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`SP2D_${levels[state.level].replace(/ /g,'_')}_${(dataset.meta.period||'terbaru').replace(/[^a-zA-Z0-9]/g,'_')}.csv`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500)}
+sel('programSelect').addEventListener('change',e=>{state.program=e.target.value;state.activity='';setOptions();filterChanged()});sel('activitySelect').addEventListener('change',e=>{state.activity=e.target.value;filterChanged()});
+sel('resetAll').addEventListener('click',()=>{state={...state,program:'',activity:'',focus:null,level:Math.min(1,deepestLevel),search:'',page:0,sortKey:'budget',sortDir:-1};setOptions();sel('searchInput').value='';render()});
+sel('searchInput').addEventListener('input',e=>{state.search=e.target.value;state.page=0;renderTable()});sel('levelSelect').addEventListener('change',e=>{if(!nodes.some(n=>n.level===Number(e.target.value)))return;state.level=Number(e.target.value);state.focus=null;state.page=0;render()});sel('chartSort').addEventListener('change',e=>{state.chartSort=e.target.value;renderCharts()});
+sel('activityChart').addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b)drill(nodeById.get(Number(b.dataset.id)))});
+sel('dataRows').addEventListener('click',e=>{let b=e.target.closest('[data-detail]');if(b)openDetail(Number(b.dataset.detail))});
+for(const th of document.querySelectorAll('th[data-sort]'))th.addEventListener('click',()=>{let k=th.dataset.sort;if(state.sortKey===k)state.sortDir*=-1;else{state.sortKey=k;state.sortDir=['name','code'].includes(k)?1:-1}state.page=0;renderTable()});
+sel('prevPage').addEventListener('click',()=>{if(state.page>0){state.page--;renderTable()}});sel('nextPage').addEventListener('click',()=>{state.page++;renderTable()});sel('clearFocus').addEventListener('click',()=>{state.focus=null;state.page=0;render()});sel('goUp').addEventListener('click',goUp);sel('exportCsv').addEventListener('click',exportCsv);
+const closeDetail=()=>sel('detailsModal').classList.remove('open');sel('closeModal').addEventListener('click',closeDetail);sel('dismissModal').addEventListener('click',closeDetail);sel('detailsModal').addEventListener('click',e=>{if(e.target.id==='detailsModal')closeDetail()});sel('drillModal').addEventListener('click',()=>{if(detailNode)drill(detailNode)});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDetail()});
+sel('expandHierarchy').addEventListener('click',()=>sel('hierarchyList').querySelectorAll('details').forEach(x=>x.open=true));sel('collapseHierarchy').addEventListener('click',()=>sel('hierarchyList').querySelectorAll('details').forEach(x=>x.open=false));
+sel('themeToggle').addEventListener('click',()=>{document.body.classList.toggle('dark');renderKpis()});
+document.querySelectorAll('.nav-link').forEach(link=>link.addEventListener('click',()=>{document.querySelectorAll('.nav-link').forEach(n=>n.classList.remove('active'));link.classList.add('active')}));
+
+// XLSX reader with native browser APIs. Offline; no external scripts or network requests.
+async function readZipEntries(buffer){
+ const data=new DataView(buffer),bytes=new Uint8Array(buffer);let e=-1;
+ for(let i=bytes.length-22;i>=Math.max(0,bytes.length-65557);i--){if(data.getUint32(i,true)===0x06054b50){e=i;break}}
+ if(e<0)throw Error('Berkas bukan XLSX/ZIP yang valid.');
+ const count=data.getUint16(e+10,true),start=data.getUint32(e+16,true);let at=start;
+ const names=new Map(),dec=new TextDecoder();
+ for(let n=0;n<count;n++){
+  if(data.getUint32(at,true)!==0x02014b50)throw Error('Struktur ZIP tidak didukung.');
+  const method=data.getUint16(at+10,true),size=data.getUint32(at+20,true),nameLen=data.getUint16(at+28,true),extra=data.getUint16(at+30,true),comment=data.getUint16(at+32,true),offset=data.getUint32(at+42,true);
+  const name=dec.decode(bytes.subarray(at+46,at+46+nameLen));names.set(name,{method,size,offset});at+=46+nameLen+extra+comment;
+ }
+ return async name=>{
+  const ent=names.get(name);if(!ent)throw Error('Bagian '+name+' tidak ditemukan di Excel.');
+  const i=ent.offset;if(data.getUint32(i,true)!==0x04034b50)throw Error('Entri ZIP rusak.');
+  const st=i+30+data.getUint16(i+26,true)+data.getUint16(i+28,true);
+  const compressed=bytes.slice(st,st+ent.size);
+  if(ent.method===0)return dec.decode(compressed);
+  if(ent.method!==8||typeof DecompressionStream==='undefined')throw Error('Browser tidak mendukung dekompresi XLSX ini. Coba Chrome/Edge terbaru.');
+  const stream=new Blob([compressed]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+  return await new Response(stream).text();
+ };
+}
+function cellValue(cell,shared){
+ const t=cell.getAttribute('t');if(t==='inlineStr')return Array.from(cell.getElementsByTagName('t')).map(n=>n.textContent).join('');
+ const v=cell.getElementsByTagName('v')[0];if(!v)return null;
+ if(t==='s')return shared[Number(v.textContent)]||'';
+ if(t==='str'||t==='e')return v.textContent;
+ const num=Number(v.textContent);return Number.isFinite(num)?num:null;
+}
+async function loadExcel(file){
+ if(!/\.xlsx$/i.test(file.name))throw Error('Pilih file Excel berformat .xlsx.');
+ if(file.size>40*1024*1024)throw Error('Ukuran file maksimal 40 MB.');
+ const get=await readZipEntries(await file.arrayBuffer());
+ let shared=[];
+ try{const xml=new DOMParser().parseFromString(await get('xl/sharedStrings.xml'),'application/xml');shared=Array.from(xml.getElementsByTagName('si')).map(si=>Array.from(si.getElementsByTagName('t')).map(t=>t.textContent).join(''))}catch(_){}
+ const sheet=new DOMParser().parseFromString(await get('xl/worksheets/sheet1.xml'),'application/xml');
+ if(sheet.getElementsByTagName('parsererror').length)throw Error('XML sheet Excel rusak.');
+ const rows=[];
+ for(const row of sheet.getElementsByTagName('row')){
+  let result=Array(32).fill(null);
+  for(const c of row.getElementsByTagName('c')){
+   const ref=c.getAttribute('r')||'';const m=/^([A-Z]+)/.exec(ref);if(!m)continue;
+   let col=0;for(const char of m[1])col=col*26+char.charCodeAt(0)-64;col--;
+   if(col<32)result[col]=cellValue(c,shared);
+  }
+  rows[Number(row.getAttribute('r'))-1]=result;
+ }
+ const text=v=>v==null?'':String(v).trim();
+ const amount=(row,i,alt)=>{let n=row[i];if(n==null&&alt!==undefined)n=row[alt];return typeof n==='number'?Math.round(n):Number(n)||0};
+ const out=[],parents=[];let validRows=0;
+ for(let idx=8;idx<rows.length;idx++){
+  const row=rows[idx];if(!row||text(row[0])==='JUMLAH SELURUHNYA'||typeof row[16]!=='number')continue;
+  let lev=-1,code='',name='';
+  if(text(row[1])){
+   if(/^[A-Z]{2}$/.test(text(row[1]))){lev=0;code=text(row[1]);name=text(row[3])}
+   else if(/^[A-Z]{2}\.\d+$/.test(text(row[1]))){lev=1;code=text(row[1]);name=text(row[8])}
+  }else if(text(row[2])){lev=text(row[2]).includes('.')?3:2;code=text(row[2]);name=text(row[lev===3?10:6])}
+  else if(text(row[4])){lev=4;code=text(row[4]);name=text(row[9])}
+  else if(text(row[5])){lev=5;code=text(row[5]);name=text(row[11])}
+  else if(text(row[7])){lev=6;code=text(row[7]);name=text(row[12])}
+  else if(text(row[13])){lev=7;let raw=text(row[13]),m=/^(\d+)\s*[.]\s*(.*)/.exec(raw);code=m?m[1]:'—';name=m?m[2]:raw}
+  if(lev<0)continue;
+  if(lev>parents.length)throw Error('Hierarki Excel tidak lengkap di baris '+(idx+1)+'.');
+  while(parents.length>lev)parents.pop();
+  const node={id:out.length,level:lev,code,name:name||code,parent:parents.length?parents[parents.length-1]:null,row:idx+1,budget:amount(row,16),lock:amount(row,18),prev:amount(row,22),this:amount(row,23),spent:amount(row,25,24),remain:amount(row,30,29)};
+  out.push(node);parents.push(node.id);if(lev===7)validRows++
+ }
+ if(out.length===0||!out.some(n=>n.level===0))throw Error('Format tidak sesuai. Gunakan template Laporan FA Detail (16 Segmen) dengan kolom dan hierarki yang sama.');
+ const parentSet=new Set(out.map(n=>n.parent).filter(x=>x!==null));
+ const sums={budget:0,lock:0,prev:0,this:0,spent:0,remain:0};
+ for(const n of out.filter(n=>!parentSet.has(n.id)))for(const key of Object.keys(sums))sums[key]+=n[key];
+ return {meta:{...dataset.meta,period:file.name.replace(/\.xlsx$/i,''),sourceRows:rows.length,total:sums},nodes:out};
+}
+function applyDataset(data,fileName){
+ dataset=data;nodes=data.nodes;nodeById=new Map(nodes.map(n=>[n.id,n]));
+ childIds=new Map();for(const n of nodes){if(n.parent!==null){if(!childIds.has(n.parent))childIds.set(n.parent,[]);childIds.get(n.parent).push(n.id)}}
+ items=nodes.filter(n=>!childIds.has(n.id));
+ for(const n of items)n.path=pathTo(n).map(p=>p.id);
+ deepestLevel=Math.max(0,...nodes.map(n=>n.level));
+ allPrograms=nodes.filter(n=>n.level===0);allActivities=nodes.filter(n=>n.level===1);
+ state={program:'',activity:'',focus:null,level:Math.min(1,deepestLevel),search:'',sortKey:'budget',sortDir:-1,page:0,pageSize:12,chartSort:'budget'};
+ sel('searchInput').value='';sel('levelSelect').value=String(state.level);
+ sel('levelSelect').disabled=false;for(const option of sel('levelSelect').options)option.disabled=!nodes.some(n=>n.level===Number(option.value));sel('chartSort').value='budget';
+ sel('itemCountNote').textContent=number(items.length)+' rincian pada tingkat terakhir';
+ document.querySelector('.date-pill').lastChild.textContent='Data: '+fileName;
+ document.querySelector('.main-footer').lastElementChild.textContent=`${allPrograms.length} program · ${allActivities.length} kegiatan · ${items.length} rincian akhir · Offline`;
+ document.querySelector('.subtitle').innerHTML='<strong>'+esc(fileName)+'</strong> · Data Excel berhasil dimuat';
+ document.querySelector('.source-mini strong').lastChild.textContent='Data Excel termuat';
+ document.querySelector('.source-mini > span').textContent=fileName;
+ document.querySelector('.source-mini > div').textContent=number(nodes.length)+' baris hierarki';
+ setOptions();render();
+}
+sel('uploadButton').addEventListener('click',()=>sel('excelUpload').click());
+sel('excelUpload').addEventListener('change',async e=>{
+ const file=e.target.files[0];if(!file)return;
+ const status=sel('uploadStatus'),btn=sel('uploadButton');status.style.display='block';status.textContent='Membaca '+file.name+' ...';btn.disabled=true;
+ try{const next=await loadExcel(file);applyDataset(next,file.name);status.textContent=`✓ Data diperbarui dari ${file.name}: ${number(items.length)} rincian akhir, ${number(nodes.length)} baris hierarki. Semua filter, grafik, dan tabel telah diperbarui.`;status.style.borderColor='var(--green)'}
+ catch(err){status.textContent='✕ Gagal mengunggah: '+err.message+' Data sebelumnya tetap tersimpan.';status.style.borderColor='var(--red)';console.error(err)}
+ finally{btn.disabled=false;e.target.value=''}
+});
+
+for(const option of sel('levelSelect').options)option.disabled=true;
+sel('levelSelect').disabled=true;
+setOptions();render();
+})();
+</script>
+</body>
+</html>
